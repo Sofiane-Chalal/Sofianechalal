@@ -27,6 +27,21 @@
       </div>
       <aside class="profile" aria-label="Photo and contact information">
         <img class="portrait" src="assets/sofiane-chalal.jpeg" alt="Sofiane Chalal by the Mediterranean coast" width="244" height="298">
+        <script>
+          (() => {
+            const portrait = document.querySelector('.portrait');
+            function choosePortrait() {
+              const showGoldfinch = Math.random() < 1 / 3;
+              portrait.src = showGoldfinch ? 'assets/chardonneret-elegant.jpg' : 'assets/sofiane-chalal.jpeg';
+              portrait.alt = showGoldfinch ? 'European goldfinch perched on a branch' : 'Sofiane Chalal by the Mediterranean coast';
+            }
+            choosePortrait();
+            // Draw again when Back or Forward restores this page from the browser cache.
+            window.addEventListener('pageshow', (event) => {
+              if (event.persisted) choosePortrait();
+            });
+          })();
+        </script>
         <div>
           <p class="profile-name">Sofiane Chalal</p>
           <p class="profile-meta">L2S · CentraleSupélec<br>Université Paris-Saclay<br>France</p>
