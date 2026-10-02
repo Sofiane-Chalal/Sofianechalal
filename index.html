@@ -31,7 +31,7 @@
           (() => {
             const portrait = document.querySelector('.portrait');
             function choosePortrait() {
-              const showGoldfinch = Math.random() < 1 / 3;
+              const showGoldfinch = Math.random() < 1 / 4;
               portrait.src = showGoldfinch ? 'assets/chardonneret-elegant.jpg' : 'assets/sofiane-chalal.jpeg';
               portrait.alt = showGoldfinch ? 'European goldfinch perched on a branch' : 'Sofiane Chalal by the Mediterranean coast';
             }
