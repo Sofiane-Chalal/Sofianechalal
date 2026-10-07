@@ -30,6 +30,11 @@ img { display: block; max-width: 100%; }
   padding-block: 2.8rem 1.45rem;
   border-bottom: 1px solid var(--line);
 }
+.site-identity { position: relative; display: flex; align-items: center; gap: 1.5rem; }
+.header-goldfinch { position: absolute; left: -88px; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 64px; height: 64px; flex: 0 0 auto; }
+.header-goldfinch img { width: 100%; height: 100%; image-rendering: pixelated; }
+.header-cv { display: inline-flex; align-items: center; justify-content: center; min-width: 2rem; min-height: 2.5rem; font: .75rem/1.5 Arial, Helvetica, sans-serif; color: var(--muted); }
+.header-cv:hover { color: var(--blue); }
 .site-name { font-size: 1.75rem; color: var(--ink); letter-spacing: -.025em; white-space: nowrap; }
 .site-name:hover { text-decoration: none; color: var(--blue); }
 .navigation { display: flex; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; gap: 1.7rem; font: .9375rem/1.5 Arial, Helvetica, sans-serif; }
@@ -77,9 +82,16 @@ h3 { font-size: 1.08rem; margin: 0 0 .3rem; }
 .talk p { margin: .25rem 0 0; }
 .site-footer { display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem 0 2rem; border-top: 1px solid var(--line); font: .8125rem/1.6 Arial, Helvetica, sans-serif; color: var(--muted); }
 
+@media (max-width: 1151px) {
+  .site-identity { gap: .9rem; }
+  .header-goldfinch { position: static; transform: none; width: 48px; height: 48px; }
+}
+
 @media (max-width: 700px) {
   .container { width: min(100% - 2.25rem, 570px); }
   .site-header { align-items: flex-start; flex-direction: column; gap: .75rem; padding-top: 1.8rem; }
+  .site-identity { gap: .65rem; }
+  .site-name { font-size: 1.5rem; }
   .navigation { align-self: flex-end; max-width: 100%; gap: .5rem 1.8rem; }
   main { padding-top: 2rem; }
   .about-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
@@ -101,7 +113,7 @@ h3 { font-size: 1.08rem; margin: 0 0 .3rem; }
 
 @media print {
   .container { width: 100%; }
-  .navigation, .skip-link { display: none; }
+  .navigation, .skip-link, .header-goldfinch { display: none; }
   .site-header { padding-top: 0; }
   main { padding-block: 1rem; }
   a { color: inherit; }
