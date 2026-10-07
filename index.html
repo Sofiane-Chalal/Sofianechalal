@@ -8,23 +8,28 @@
   <meta name="author" content="Sofiane Chalal">
   <link rel="icon" type="image/x-icon" href="assets/chardonneret.ico?v=20261003-icons2" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/svg+xml" href="assets/chardonneret.svg?v=20261003-icons2" sizes="any">
-  <link rel="stylesheet" href="style.css?v=20261007-pixelbird">
+  <script src="theme.js?v=20261007-theme"></script>
+  <link rel="stylesheet" href="style.css?v=20261007-theme">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="container">
     <header class="site-header">
       <div class="site-identity">
-        <a class="header-goldfinch" href="research.html?v=20261007-pixelbird" aria-label="Go to Research" title="Go to Research">
+        <a class="header-goldfinch" href="research.html?v=20261007-theme" aria-label="Go to Research" title="Go to Research">
           <img src="assets/goldfinch-about.svg" width="64" height="64" alt="">
         </a>
-        <a class="site-name" href="index.html?v=20261007-pixelbird">Sofiane Chalal</a>
+        <a class="site-name" href="index.html?v=20261007-theme">Sofiane Chalal</a>
         <a class="header-cv" href="documents/CV-Sofiane-Chalal.pdf" aria-label="Curriculum vitae (PDF)">CV</a>
       </div>
       <nav class="navigation" aria-label="Main navigation">
-        <a href="index.html?v=20261007-pixelbird" aria-current="page">About</a>
-        <a href="research.html?v=20261007-pixelbird">Research</a>
-        <a href="talks.html?v=20261007-pixelbird">Talks</a>
+        <a href="index.html?v=20261007-theme" aria-current="page">About</a>
+        <a href="research.html?v=20261007-theme">Research</a>
+        <a href="talks.html?v=20261007-theme">Talks</a>
+        <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode" hidden>
+          <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 13.2A8.6 8.6 0 0 1 10.8 3.5a8.6 8.6 0 1 0 9.7 9.7Z"/></svg>
+          <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        </button>
       </nav>
     </header>
     <main id="main" class="about-grid">
