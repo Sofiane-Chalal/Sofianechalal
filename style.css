@@ -1,13 +1,4 @@
 :root {
-  color-scheme: light;
-  --background: #fff;
-  --ink: #24282d;
-  --muted: #606973;
-  --blue: #205c94;
-  --line: #dce2e7;
-}
-
-:root[data-theme="dark"] {
   color-scheme: dark;
   --background: #181c20;
   --ink: #ece7df;
@@ -16,8 +7,17 @@
   --line: #38424c;
 }
 
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #fff;
+  --ink: #24282d;
+  --muted: #606973;
+  --blue: #205c94;
+  --line: #dce2e7;
+}
+
 * { box-sizing: border-box; }
-html { overflow-wrap: break-word; }
+html { font-size: 93.75%; overflow-wrap: break-word; }
 body {
   margin: 0;
   background: var(--background);
@@ -128,7 +128,7 @@ h3 { font-size: 1.08rem; margin: 0 0 .3rem; }
 }
 
 @media print {
-  :root, :root[data-theme="dark"] {
+  :root, :root[data-theme] {
     color-scheme: light;
     --background: #fff;
     --ink: #24282d;

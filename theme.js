@@ -3,7 +3,6 @@
 
   const storageKey = 'sofiane-site-theme';
   const root = document.documentElement;
-  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   let preference = null;
   let button;
 
@@ -17,7 +16,7 @@
   }
 
   function applyTheme() {
-    const theme = preference || (systemTheme.matches ? 'dark' : 'light');
+    const theme = preference || 'dark';
     root.dataset.theme = theme;
     if (button) {
       button.setAttribute('aria-pressed', String(theme === 'dark'));
@@ -43,10 +42,6 @@
       }
       applyTheme();
     });
-  });
-
-  systemTheme.addEventListener('change', () => {
-    if (!preference) applyTheme();
   });
 
   window.addEventListener('storage', (event) => {
